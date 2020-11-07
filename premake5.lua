@@ -24,7 +24,10 @@ project "SympleEngine"
 	}
 
 	include {
-
+		"%{prj.name}/vender/spdlog/include"
 	}
+
+	filter "system:windows"
+		cppdialect "C++17"
 
 	SY_PLATFORM_WINDOWS;SY_BUILD_DLL;_WINDLL;
