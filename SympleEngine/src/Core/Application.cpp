@@ -1,3 +1,4 @@
+#include "syegpch.h"
 #include "Application.h"
 
 namespace Symple

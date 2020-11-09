@@ -1,3 +1,4 @@
+#include "syegpch.h"
 #include "Console.h"
 
 #include <spdlog/sinks/stdout_color_sinks.h>
