@@ -12,7 +12,7 @@ namespace Symple
 		WindowClose, WindowResize, WindowFocus, WindowUnFocus, WindowMove,
 		AppTick, AppUpdate, AppRender,
 		KeyPress, KeyRelease, KeyType,
-		MousePress, MosueRelease, MouseMove, MouseScroll
+		MousePress, MouseRelease, MouseMove, MouseScroll
 	};
 
 	enum EventCategory

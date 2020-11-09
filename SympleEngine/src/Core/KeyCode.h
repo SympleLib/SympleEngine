@@ -8,7 +8,7 @@ namespace Symple
 
 	namespace Key
 	{
-		enum KeyCode
+		enum : KeyCode
 		{
 			Unknown = -1,
 

@@ -18,7 +18,7 @@ namespace Symple
 		KeyEvent(const KeyCode keycode)
 			: mKeyCode(keycode) {}
 
-		KeyCode mKeyCode;
+		const KeyCode mKeyCode;
 	};
 
 	class KeyPressEvent : public KeyEvent
@@ -38,7 +38,7 @@ namespace Symple
 
 		EVENT_CLASS_TYPE(KeyPress)
 	private:
-		uint16_t mRepeatCount;
+		const uint16_t mRepeatCount;
 	};
 
 	class KeyReleaseEvent : public KeyEvent
