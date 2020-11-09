@@ -1,3 +1,4 @@
+#include "syegpch.h"
 #include "Core/Window.h"
 
 namespace Symple
@@ -8,5 +9,6 @@ namespace Symple
 #ifdef SY_PLATFORM_WINDOWS
 		window = MakeScope<Platform::Window>(props);
 #endif
+		return window;
 	}
 }

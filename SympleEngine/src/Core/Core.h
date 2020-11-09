@@ -10,6 +10,12 @@
 #error Symple Engine only supports windows!
 #endif
 
+#ifdef SY_DEBUG
+#define SY_ENABLE_ASSERTS
+#endif
+
+#include <memory>
+
 namespace Symple
 {
 	template<typename T>
