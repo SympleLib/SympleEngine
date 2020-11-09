@@ -68,7 +68,7 @@ namespace Symple
 			: MouseButtonEvent(button)
 		{}
 
-		std::string ToString() const
+		std::string ToString() const override
 		{
 			std::stringstream ss;
 			ss << "MousePressEvent: " << mButton;
@@ -84,7 +84,7 @@ namespace Symple
 			: MouseButtonEvent(button)
 		{}
 
-		std::string ToString() const
+		std::string ToString() const override
 		{
 			std::stringstream ss;
 			ss << "MousePressEvent: " << mButton;
