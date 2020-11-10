@@ -10,7 +10,7 @@
 #error Symple Engine only supports windows!
 #endif
 
-#ifdef SY_DEBUG
+#ifdef _SY_DEBUG
 #define SY_ENABLE_ASSERTS
 #endif
 

@@ -60,7 +60,7 @@ project "SympleEngine"
 		}
 
 	filter "configurations:Debug"
-		defines "SY_DEBUG"
+		defines "_SY_DEBUG"
 		symbols "On"
 
 	filter "configurations:Release"
