@@ -1,3 +1,4 @@
+#include "Symple/Engine/Test.h"
 #include <cstdio>
 
 void Test()

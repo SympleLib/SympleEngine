@@ -5,7 +5,7 @@ set(TARGET_NAME SympleEngine)
 add_library(
         ${TARGET_NAME} STATIC
         src/Test.cpp
-)
+        include/Symple/Engine/Test.h)
 
 target_include_directories(${TARGET_NAME} PUBLIC include)
 target_include_directories(${TARGET_NAME} PRIVATE src)
