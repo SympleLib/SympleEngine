@@ -9,3 +9,6 @@
 **/.idea/
 **/cmake-build-debug/
 **/cmake-build-release/
+
+# VC Packages
+**/vcpkg_installed/
