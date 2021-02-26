@@ -3,7 +3,7 @@ message(STATUS "Setting up the Engine")
 
 set(TARGET_NAME SympleEngine)
 add_library(
-        ${TARGET_NAME} SHARED
+        ${TARGET_NAME} STATIC
         src/Test.cpp
 )
 

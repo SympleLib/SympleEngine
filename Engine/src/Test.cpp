@@ -1,4 +1,4 @@
 #include <cstdio>
 
-__declspec(dllexport) void Test()
+void Test()
 { std::puts("Test works!"); }
