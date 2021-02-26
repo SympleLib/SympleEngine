@@ -1,14 +1,11 @@
 # Binaries
 **/bin/
-!vendor/premake/bin/
-bin-int/
+**/bin-int/
 
 # Log files
 *.log
 
-# Visual Studio files and folder
-.vs/
-**.sln
-**.vcxproj
-**.vcxproj.filters
-**.vcxproj.user
+# CLion stuff
+**/.idea/
+**/cmake-build-debug/
+**/cmake-build-release/
