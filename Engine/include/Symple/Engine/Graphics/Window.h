@@ -25,7 +25,12 @@ namespace Symple::Engine
     public:
         virtual ~Window() = default;
 
+        virtual void SetTitle(std::string_view title) const = 0;
+        virtual const std::string &GetTitle() const = 0;
+
+        virtual void SetWidth(uint32_t width) const = 0;
         virtual uint32_t GetWidth() const = 0;
+        virtual void SetHeight(uint32_t height) const = 0;
         virtual uint32_t GetHeight() const = 0;
 
         virtual void SetVSync(bool enabled) const = 0;
@@ -33,11 +38,11 @@ namespace Symple::Engine
 
         virtual NativeWindow_t *GetNativeWindow() const = 0;
 
-        static Scope<Window> Create(const WindowProperties &properties = {});
+        static Scope<Window> Create(const WindowProperties &properties = WindowProperties {});
 
-        SY_ENGINE_PROPERTY_GET(GetWidth) uint32_t Width;
-        SY_ENGINE_PROPERTY_GET(GetHeight) uint32_t Height;
+        SY_ENGINE_PROPERTY_GET_SET(GetWidth, SetWidth) uint32_t Width;
+        SY_ENGINE_PROPERTY_GET_SET(GetHeight, SetHeight) uint32_t Height;
         SY_ENGINE_PROPERTY_GET_SET(IsVSync, SetVSync) bool VSync;
-        SY_ENGINE_PROPERTY_GET(NativeWindow_t) NativeWindow *NativeWindow;
+        SY_ENGINE_PROPERTY_GET(GetNativeWindow) NativeWindow_t *NativeWindow;
     };
 }

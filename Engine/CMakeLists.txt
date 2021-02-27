@@ -1,5 +1,7 @@
 project(SympleEngine-Engine)
-message(STATUS "Setting up the Engine")
+message(STATUS "Setting up Symple Engine")
+
+option(SY_ENGINE_ENABLE_PROFILE "Enable or disable profiling?" ON)
 
 find_package(glfw3 REQUIRED)
 
@@ -12,7 +14,16 @@ add_library(
         include/Symple/Engine/Core/EntryPoint.h
         include/Symple/Engine/SympleEngine.h
         include/Symple/Engine/Core/Object.h
-        include/Symple/Engine/Graphics/Window.h include/Platform/GLFW/GLFWWindow.h)
+        include/Symple/Engine/Graphics/Window.h
+)
+
+#if (WIN32)
+    target_sources(
+        ${TARGET_NAME}
+        PRIVATE include/Platform/GLFW/GLFWWindow.h
+        PRIVATE src/Platform/GLFW/GLFWWindow.cpp
+    )
+#endif()
 
 target_include_directories(${TARGET_NAME} PUBLIC include)
 target_include_directories(${TARGET_NAME} PRIVATE src)

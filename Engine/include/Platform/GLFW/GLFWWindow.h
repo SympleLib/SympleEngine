@@ -11,7 +11,26 @@ namespace Symple::Engine
     {
     private:
         GLFWwindow *m_Handle;
+
+        struct WindowData
+        {
+            union
+            {
+                WindowProperties Properties;
+
+                struct
+                {
+                    std::string Title;
+                    uint32_t Width, Height;
+                };
+            };
+
+            bool VSync;
+        } m_Data;
     public:
+        GLFWWindow(const WindowProperties &properties = WindowProperties {});
+        virtual ~GLFWWindow() override;
+
         virtual uint32_t GetWidth() const override;
         virtual uint32_t GetHeight() const override;
 
