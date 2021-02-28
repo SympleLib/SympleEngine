@@ -9,7 +9,7 @@ namespace Symple::Engine
         SY_ASSERT(!s_Instance, "Application already exists!")
 
         s_Instance = this;
-        m_MainWindow = Window::Create(WindowProperties { .Title = name });
+        m_MainWindow = Window::Create(WindowProperties(name));
     }
 
     Window &Application::GetMainWindow()

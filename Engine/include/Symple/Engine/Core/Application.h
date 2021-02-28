@@ -19,6 +19,7 @@ namespace Symple::Engine
         virtual void Start() = 0;
     public:
         Application(std::string_view name = "Symple App");
+        virtual ~Application() = default;
 
         Window &GetMainWindow();
 
