@@ -1,9 +1,9 @@
 project(SympleEngine-Engine)
 message(STATUS "Setting up Symple Engine")
 
-option(SY_ENGINE_ENABLE_PROFILE "Enable or disable profiling?" ON)
+set(SY_ENGINE_ENABLE_PROFILE ON CACHE BOOL "Enable or disable profiling?" FORCE)
 
-find_package(glfw3 REQUIRED)
+find_package(glfw3 CONFIG REQUIRED)
 
 set(TARGET_NAME SympleEngine)
 add_library(

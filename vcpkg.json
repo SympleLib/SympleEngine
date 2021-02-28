@@ -1,8 +1,7 @@
 {
   "name": "symple-engine",
   "version": "1.0.0",
-  "dependencies":
-  [
+  "dependencies": [
     "glfw3"
   ]
 }
